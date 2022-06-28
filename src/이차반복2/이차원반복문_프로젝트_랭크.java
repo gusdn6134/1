@@ -22,13 +22,35 @@ public class 이차원반복문_프로젝트_랭크 {
 			rankList = {2,3,4,1}
 	*/
 		
+		
+		/*
+		 * 87
+		 *  
+		 * 
+		 * 
+		 */
 		int[] scoreList = { 87, 42,  11, 98};
-		int[] rankList = new int[4];
+	      //              { 87, 42,  11, 98};
+	      //  			  {1 , 2 ,3  0 ,}
+	      int[] rankList = new int[4];
+	      
+	      for(int i=0;i<scoreList.length;i++) 
+	      {
+	         for(int j=0;j<scoreList.length;j++)
+	         {
+	            if(scoreList[i]<scoreList[j]) 
+	            {
+	               rankList[i]+=1;
+	            }
+	         }
+	      }
+	      
+	      for(int i=0;i<rankList.length;i++)
+	      {
+	         rankList[i]+=1;
+	      }
+	      System.out.println(Arrays.toString(rankList));
 	
-		
-	
-		
-
 	}
 	
 
