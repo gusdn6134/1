@@ -17,41 +17,45 @@ public class 이차원반복문_프로젝트_개수찾기 {
 		
 		int[] arr = { 1, 2, 3, 3, 100, 1, 3, 3, 2, 3, 2 };
 		
-		int minCount = arr.length;
-		int maxCount = 0;
-		int maxIndex = -1;
-		int minIndex = -1; 
-		
-		
+	
+	
+		int max = 0;
+		int maxIndex = 0;
+		int min = arr.length;
+		int minIndex = 0;
+
 		for(int i = 0; i < arr.length; i++)
-		{	
-			int count = 0;
+		{
+			int count = 0;	
+			
 			for(int j = 0; j < arr.length; j++)
 			{
 				if(arr[i] == arr[j])
 				{
 					count ++;
 				}
-
 			}
 			
-			if(count > maxCount)
+			if(count > max)
 			{
-				maxCount = count;
+				max = count;
 				maxIndex = i;
 			}
 			
-			if(count < minCount)
+			if(count < min)
 			{
-				minCount = count;
+				min = count;
 				minIndex = i;
 			}
 		}
 		
-		System.out.println(arr[maxIndex] + ": " + maxCount + "개");
-		System.out.println(arr[minIndex] + ": " + minCount + "개");
-		int total = maxCount + minCount;
-		System.out.println("답" + total);
+		int total = max + min;
+		
+		System.out.println(arr[maxIndex] + ": " + max + "개");
+		System.out.println(arr[minIndex] + ": " + min + "개");
+		System.out.println("답 : " + total + "개");
+		
+		
 	}
 
 }
