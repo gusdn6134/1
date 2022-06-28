@@ -22,7 +22,12 @@ public class 이차원반복문_프로젝트_랭크2 {
 		
 		int[] scoreList = { 87, 42,  11, 98};
 		int[] rankList = new int[4];
-		
+		/*
+		 * 	87
+		 *  42 11 98 
+		 *  
+		 *  
+		 */
 		int max = 0;
 		int count = 0;
 		int index = 0;
