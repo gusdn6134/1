@@ -1,4 +1,4 @@
-package 이차반복3;
+package 이차반복4;
 
 public class 이차원반복문_프로젝트_개수찾기 {
 

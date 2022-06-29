@@ -38,8 +38,17 @@ public class 이차원반복문_기본이론2_사각형그리기 {
 			System.out.println();
 		}
 		
+		System.out.println();
 		
-		
+		for(int i = 0; i < 3; i++)
+		{
+			System.out.print("#");
+			
+			for(int j = 0; j < 2; j++) {
+				System.out.print("#");
+			}
+			System.out.println();
+		}
 		
 
 	}

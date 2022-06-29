@@ -25,15 +25,11 @@ public class 이차원반복문_기본이론3_중첩반복문과배열 {
 			{
 				arr[a] = a + 1;
 				a ++;
-
 			}
-			
 		}
 		
 		System.out.println(Arrays.toString(arr));
-		
-		
-		
+
 	}
 
 }

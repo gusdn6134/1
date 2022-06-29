@@ -1,8 +1,8 @@
-package 배열1;
+package 연습장;
 
 import java.util.Scanner;
 
-public class E1_배열_기본이론4_학생성적5 {
+public class 배열1_학생성적5 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -23,33 +23,34 @@ public class E1_배열_기본이론4_학생성적5 {
 		 int numberList[] = {1001, 1002, 1003, 1004, 1005};
 		 int scoreList[]  = {  87,   11,   45,   98,   23};
 		 
-	
+		 
+		
 		 
 		 while(true)
 		 {
-			 
 			 int room = -1;
-			 System.out.println("학번입력 : ");
+			 
+			 System.out.print("학번 입력 : ");
 			 int number = scan.nextInt();
 			 
-			 for(int i = 0; i < 5; i++)
-			 	{
+			 for(int i = 0; i < numberList.length; i++)
+			 {
 				 if(number == numberList[i])
 				 {
 					 room = i;
-					 System.out.println("성적 = " + scoreList[room]);
+					 
+					 System.out.println("성적 : " + scoreList[room]);
 				 }
-			 	}
-			 
+			 }
 			 
 			 if(room == -1)
 			 {
-				 System.out.println("해당학번은 존재하지 않습니다");
-				
+				 System.out.println("해당학번은 존재하지 않습니다.");
 			 }
-
+			  
+			 
 		 }
-		
+
 	}
 
 }

@@ -1,4 +1,4 @@
-package 이차반복3;
+package 이차반복4;
 
 import java.util.Arrays;
 import java.util.Random;
