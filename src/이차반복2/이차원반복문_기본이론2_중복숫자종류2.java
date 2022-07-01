@@ -26,6 +26,7 @@ public class 이차원반복문_기본이론2_중복숫자종류2 {
 					}
 				}		
 				System.out.println(Arrays.toString(arr1));
+				
 				for(int i = 0; i < 4; i++) {
 					arr1[i] += 1;
 				}

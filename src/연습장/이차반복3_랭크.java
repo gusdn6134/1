@@ -1,14 +1,12 @@
-package 이차반복2;
+package 연습장;
 
 import java.util.Arrays;
 
-
-public class 이차원반복문_프로젝트_랭크 {
+public class 이차반복3_랭크 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		
+
 		/*
 		[랭킹]
 			다음 학생리스트의 점수를 보고 등수를 저장하시오.
@@ -28,24 +26,30 @@ public class 이차원반복문_프로젝트_랭크 {
 	      //  			  {1 , 2 ,3  0 ,}
 	      int[] rankList = new int[4];
 	      
-	      for(int i=0;i<scoreList.length;i++) 
+	      
+	      
+	      for(int i = 0; i < scoreList.length; i++)
 	      {
-	         for(int j=0;j<scoreList.length;j++)
-	         {
-	            if(scoreList[i]<scoreList[j]) 
-	            {
-	               rankList[i]+=1;
-	            }
-	         }
+	    	  for(int j = 0; j < rankList.length; j++)
+	    	  {
+	    		  if(scoreList[i] < scoreList[j])
+	    		  {
+	    			  rankList[i] += 1;
+	    			  
+	    		  }
+	    		  
+	    	  }
 	      }
 	      
-	      for(int i=0;i<rankList.length;i++)
+	      
+	      for(int i = 0; i < rankList.length; i++)
 	      {
-	         rankList[i]+=1;
+	    	  rankList[i] += 1;
 	      }
+	      
 	      System.out.println(Arrays.toString(rankList));
-	
+	      
+	      
 	}
-	
 
 }

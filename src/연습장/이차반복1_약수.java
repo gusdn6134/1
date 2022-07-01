@@ -1,11 +1,12 @@
-package 이차반복1;
+package 연습장;
 
 import java.util.Random;
 
-public class 이차원반복문_알고리즘_약수 {
+public class 이차반복1_약수 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+
 		/* 
 		[이차원반복문]
 		
@@ -23,23 +24,8 @@ public class 이차원반복문_알고리즘_약수 {
 	 */
 		
 		Random ran = new Random();
-
-		for(int i = 0; i < 5; i++)
-		{
-			int r = ran.nextInt(6)+1;
-			System.out.print(r + " ");
-			
-			for(int j = 0; j < r -1 ; j++)
-			{
-				System.out.print(r + " ");
-				
-			}
-			
-			System.out.println();
-		}
 		
-		/*
-		 * for(int i = 0; i < 5; i++)
+		for(int i = 0; i < 5; i++)
 		{
 			int r = ran.nextInt(6)+1;
 			
@@ -50,8 +36,7 @@ public class 이차원반복문_알고리즘_약수 {
 			
 			System.out.println();
 		}
-		 */
-
+		
 	}
 
 }

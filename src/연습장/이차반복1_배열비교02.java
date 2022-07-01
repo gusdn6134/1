@@ -1,6 +1,8 @@
-package 이차반복1;
+package 연습장;
 
-public class 이차원반복문_알고리즘_배열비교02 {
+import java.util.Arrays;
+
+public class 이차반복1_배열비교02 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -22,8 +24,10 @@ public class 이차원반복문_알고리즘_배열비교02 {
 		int[] 점수 = {30, 54, 45, 100, 20};
 	
 		int 검색[] = {1001, 1003, 1003, 1002};
-			
+		
+		
 		int index = 0;
+		
 
 		for(int i = 0; i < 검색.length; i++)
 		{
@@ -39,7 +43,10 @@ public class 이차원반복문_알고리즘_배열비교02 {
 				}
 			}
 		}
-
+		 
+		
+		
+	
 	}
 
 }

@@ -1,10 +1,10 @@
-package 이차반복3;
+package 연습장;
 
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
-public class 이차원반복문_프로젝트_기억력게임 {
+public class 이차반복3_기억력게임 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -30,12 +30,11 @@ public class 이차원반복문_프로젝트_기억력게임 {
 		int front[] = {10,10,20,20,30,30,40,40,50,50};
 		int back[] = new int[10];
 		
-		
-		
 		for(int i = 0; i < front.length; i++)
 		{
 			int r1 = ran.nextInt(10);
 			int r2 = ran.nextInt(10);
+			
 			
 			int temp = front[r1];
 			front[r1] = front[r2];
@@ -43,54 +42,50 @@ public class 이차원반복문_프로젝트_기억력게임 {
 			
 		}
 		
+		
 		System.out.println(Arrays.toString(front));
 		
+		boolean check[] = new boolean [10];
 		
 		int count = 0;
-		boolean check[] = new boolean[10];
+		
 		
 		while(true)
-		{	
+		{
+			
 			System.out.println(Arrays.toString(back));
 			
-			if(count == 5)
-			{
-				break;
-			}
-			
-			System.out.println("첫번째 카드 선택 : ");
+			System.out.print("카드1 선택");
 			int num1 = scan.nextInt();
-			System.out.println("두번째 카드 선택 : ");
+			System.out.print("카드2 선택");
 			int num2 = scan.nextInt();
+			
 			
 			if(check[num1] == false && check[num2] == false)
 			{
+				if(front[num1] == front[num2])
+				{
+					check[num1] = true;
+					check[num2] = true;
 					
-			if(front[num1] == front[num2])
-			{
-				check[num1] = true;
-				check[num2] = true;
+					back[num1] = front[num1];
+					back[num2] = front[num1];
+					
+					count ++;
 				
-				back[num1] = front[num1];
-				back[num2] = front[num2];
-				count ++;
+				}
 				
-			}
-			
-			else if(front[num1] != front[num2])
-			{
-				System.out.println("틀림");
-			}
-			
+				if(front[num1] != front[num2])
+				{
+					System.out.println("카드가 다름");
+				}
 			}
 			
 			else
 			{
 				System.out.println("중복");
 			}
-				
 		}
-		
 		
 		
 	}

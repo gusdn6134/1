@@ -1,10 +1,10 @@
-package 이차반복2;
+package 연습장;
 
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
-public class 이차원반복문_프로젝트_1to4게임 {
+public class 이차반복3_1to4게임 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -36,35 +36,36 @@ public class 이차원반복문_프로젝트_1to4게임 {
 		boolean[] check = new boolean[4];
 		
 		
-		for(int i = 0; i < 4;) {
+		for(int i = 0; i < arr.length;)
+		{
 			int r = ran.nextInt(4);
-			if(check[r] == false) {
+			
+			if(check[r] == false)
+			{
 				check[r] = true;
-				arr[i] = r;
-				i += 1;
+				arr[i] = r + 1;
+				i ++;
 			}
-		}		
+		}
 		
 		int count = 0;
 		
-		while(true)
-		{
+		while(true) 
+		{	
 			System.out.println(Arrays.toString(arr));
-			
-			
 			if(count == arr.length)
 			{
+				System.out.println("끝");
 				break;
 			}
 			
-			System.out.println("가장 작은 수 인덱스 입력 : ");
+			System.out.println("가장 작은 수 인덱스 선택 :");
 			int index = scan.nextInt();
-			int min = 5;
 			
-
+			int min = 5;
 			for(int i = 0; i < arr.length; i++)
 			{
-				if(arr[i] < min)
+				if(arr[i] < min ) 
 				{
 					min = arr[i];
 				}
@@ -75,10 +76,9 @@ public class 이차원반복문_프로젝트_1to4게임 {
 				arr[index] = 9;
 				count ++;
 			}
-			
-			
-			
 		}
+		
+
 	}
 
 }

@@ -1,5 +1,8 @@
 package 이차반복4;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class 이차원반복문_프로젝트_숫자야구 {
 
 	public static void main(String[] args) {
@@ -21,8 +24,73 @@ public class 이차원반복문_프로젝트_숫자야구 {
 		 * 
 		 */
 		
+		Scanner scan = new Scanner(System.in);
+		
 		int[] com = {1, 7, 3};
 		int[] me = new int[3];	
+		
+		int index = 0;
+		int count = 0;
+		
+		
+		
+		while(true)
+		{
+			
+			System.out.println("숫자 입력 : ");
+			int num = scan.nextInt();
+			
+			boolean check = false;
+			
+			for(int i = 0; i <= index; i ++)
+			{
+				if(me[i] == num)
+				{
+					check = true;
+					
+					System.out.println("중복 다시 입력");
+				}
+			}
+			
+			if(check == false)
+			{
+				me[index] = num;
+				index ++;
+
+			}
+		
+			
+			if(index == me.length) {
+				System.out.println(Arrays.toString(me));
+				break;
+			}
+		}
+		
+		int ball = 0;
+		int strike = 0;
+		
+		
+		for(int i = 0; i < com.length; i++)
+		{
+			for(int j = 0; j < me.length; j++)
+			{
+				if(com[i] == me[j])
+				{
+					if(i == j)
+					{
+						strike ++;
+					}
+					
+					else
+					{
+						ball ++;
+					}
+				}
+			}
+		}
+	
+		System.out.println("strike : " + strike +" ball : " + ball);
+		
 
 	}
 
