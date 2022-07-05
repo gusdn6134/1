@@ -35,10 +35,9 @@ public class 이차원반복문_기본이론3_중복숫자종류3 {
 						i += 1;
 					}
 				}
+				
 				System.out.println(Arrays.toString(arr1));
 				
-				
-
 	}
 
 }

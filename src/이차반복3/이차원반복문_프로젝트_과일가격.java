@@ -18,8 +18,6 @@ public class 이차원반복문_프로젝트_과일가격 {
 		
 		int order[] = {1003,1002,1001,1001,1005};
 		
-		
-		int index = 0;
 		int total = 0;
 		
 		for(int i = 0; i < order.length; i++)
@@ -28,7 +26,7 @@ public class 이차원반복문_프로젝트_과일가격 {
 			{
 				if(order[i] == item[j])
 				{
-					index = j;
+					
 					total += price[j];
 					
 				}

@@ -1,4 +1,4 @@
-package 이차반복3;
+package 이차반복4;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -98,8 +98,8 @@ public class 이차원반복문_프로젝트_회원가입 {
 						}
 					}
 					
-					arr[index - 1] = 0;
-					index -- ;
+					arr[index - 1] = 0; // 마지막 회원 삭제 또는 앞에서 삭제한 회원이 있으면
+					index -- ;			// 뒷자리 0으로 바꿔줌
 					System.out.println("삭제 완료");
 				}
 				
