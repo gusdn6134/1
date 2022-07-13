@@ -35,33 +35,34 @@ public class 이차원반복문_프로젝트_차집합 {
 		System.out.println(Arrays.toString(arr1));
 		System.out.println(Arrays.toString(arr2));
 		
-		
 		int index = 0;
-		
-		for(int i = 0; i < arr1.length; i++)
-		{
+		for(int i = 0; i < arr1.length; i++) {
 			boolean check = false;
-			
-			for(int j = 0; j < arr2.length; j++)
-			{
-				if(arr1[i] == arr2[j])
-				{
+			for(int j = 0; j < arr2.length; j++) {
+				if(arr1[i] == arr2[j]) {
 					check = true;
 				}
 			}
-			
-			if(check == false)
-			{
+			if(check == false) {
 				temp1[index] = arr1[i];
-				index ++;
-				temp1[index] = arr2[i];
-				index ++;
+				index += 1;
 			}
 		}
 		
+		for(int i = 0; i < arr2.length; i++) {
+			boolean check = false;
+			for(int j = 0; j < arr1.length; j++) {
+				if(arr2[i] == arr1[j]) {
+					check = true;
+				}
+			}
+			if(check == false) {
+				temp1[index] = arr2[i];
+				index += 1;
+			}
+		}
 		System.out.println(Arrays.toString(temp1));
-		
-		
+	
 		int index2 = 0;
 		
 		for(int i = 0; i < temp1.length; i++)

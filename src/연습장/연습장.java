@@ -12,97 +12,100 @@ public class 연습장 {
 		Scanner scan = new Scanner(System.in);
 		
 		/*
-		 * [숫자 야구 게임]
-		 * 1. me에 1~9 사이의 숫자 3개를 저장
-		 *    (단, 중복되는 숫자는 저장 불가)
-		 *    예) 1,1,1 
-		 * 2. com과 me를 비교해 정답을 맞출 때까지 반복
-		 * 3. 숫자와 자리가 같으면 		strike += 1
-		 *    숫자만 같고 자리가 틀리면 	ball += 1
-		 * 예)
-		 * 정답 : 1 7 3
-		 * 3 1 5		: 2b
-		 * 1 5 6		: 1s
-		 * ...
-		 * 
-		 */
+		  [회원가입] 동영상으로 설명
+		  1. 추가 = > ID가 있는지 확인하고 없으면 회원가입
+		  2. 삭제(값) => 값이 들어있는 인덱스 찾아 삭제하고 그 뒷 값 앞으로 당김
 		
-		int[] com = {1, 7, 3};
-		int[] me = new int[3];	
+	 	 */
+		
+		int[] arr = {0, 0, 0, 0, 0};
+		int index = 0;
 		
 		
 		while(true)
 		{
-			int meindex = 0;
 			
-			while(true)
+			System.out.println(Arrays.toString(arr));
+			System.out.println("1) 추가 2)삭제 0) 종료");
+			int sel = scan.nextInt();
+			
+			if(sel == 0)
 			{
-				if(meindex == 3)
+				break;
+			}
+			
+			else if(sel == 1)
+			{
+				if(index < arr.length)
 				{
-					break;
-				}
-				
-				System.out.print("입력 : ");
-				int num = scan.nextInt();
-				
-				boolean check = false;
-				
-				for(int i = 0; i < meindex; i++)
-				{
-					if(num == me[i])
+					System.out.print("추가할 아이디 입력 : ");
+					int id = scan.nextInt();
+					
+					boolean check = false;
+					
+					for(int i = 0; i < arr.length; i++)
 					{
-						check = true;
-						break;
+						if(arr[i] == id)
+						{
+							check = true;
+							break;
+						}
 					}
-				}
-				
-				if(check == false)
-				{
-					me[meindex] = num;
-					meindex ++;
+					
+					if(check == false)
+					{
+						arr[index] = id;
+						index ++;
+						System.out.println(id + "님 회원가입 완료");
+					}
+					
+					else
+					{
+						System.out.println("중복");
+					}
 				}
 				
 				else
 				{
-					System.out.println("중복");
+					System.out.println("회원가입 불가");
 				}
 			}
 			
-			System.out.println("------------------------");
-			
-			int s = 0;
-			int b = 0;
-			
-			for(int i = 0; i < me.length; i++)
+			else if(sel == 2)
 			{
-				for(int j = 0; j < me.length; j++)
+				System.out.print("삭제할 id 입력 : ");
+				int id = scan.nextInt();
+				
+				int room = -1;
+				
+				for(int i = 0; i < arr.length; i++)
 				{
-					if(me[i] == com[j])
+					if(id == arr[i])
 					{
-						if(i == j)
-						{
-							s ++;
-						}
-						
-						else
-						{
-							b ++;
-						}
+						room = i;
 					}
 				}
+				
+				if(room != -1)
+				{
+					for(int i = 0; i < index - 1; i++)
+					{
+						if(i >= room)
+						{
+							arr[i] = arr[i + 1]; 
+						}
+					}
+					
+					arr[index - 1] = 0;
+					index --;
+					System.out.println("삭제완료");
+				}
+				
+				else
+				{
+					System.out.println("삭제 불가");
+				}
 			}
-			
-			System.out.println(Arrays.toString(com));
-			System.out.println(Arrays.toString(me));
-			System.out.println("s = " + s + " b =  " + b);
-			
-			if(s == 3)
-			{
-				System.out.println("종료");
-				break;
-			}
-			
-			
 		}
 
 	}

@@ -14,8 +14,10 @@ public class 이차원배열_알고리즘_2차원배열1 {
 		int sum4 = 0;
 		int count = 0;
 		
-		for (int i = 0; i < 3; i++) {
-			for (int j = 0; j < 3; j++) {
+		for (int i = 0; i < 3; i++)
+		{
+			for (int j = 0; j < 3; j++) 
+			{
 				arr[i][j] = 10 * k;
 				k += 1;
 			}
@@ -34,20 +36,26 @@ public class 이차원배열_알고리즘_2차원배열1 {
 		// 문제 4) 4의 배수의 개수 출력
 		// 정답 4) 4
 		
-		for(int i = 0; i < arr.length; i++) {
+		for(int i = 0; i < arr.length; i++)
+		{
 			System.out.println(Arrays.toString(arr[i]));
 		}
 		
-		for(int i = 0; i < arr.length; i++) {
-			for(int j = 0; j < arr[i].length; j++) {
+		for(int i = 0; i < arr.length; i++) 
+		{
+			for(int j = 0; j < arr[i].length; j++) 
+			{
 				sum += arr[i][j];
-				if(arr[i][j] % 4 == 0) {
+				
+				if(arr[i][j] % 4 == 0)
+				{
 					count += 1;
 					sum4 += arr[i][j];
 					System.out.print(arr[i][j] + " ");
 				}
 			}
 		}
+		
 		System.out.println();
 		System.out.println("전체 합 : " +  sum);
 		System.out.println("4의 배수의 합 : " +  sum4);

@@ -40,7 +40,7 @@ public class 이차원반복문_프로젝트_1to4게임 {
 			int r = ran.nextInt(4);
 			if(check[r] == false) {
 				check[r] = true;
-				arr[i] = r;
+				arr[i] = r + 1;
 				i += 1;
 			}
 		}		
